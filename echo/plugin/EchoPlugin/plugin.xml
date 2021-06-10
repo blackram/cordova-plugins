@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="rs-plugin-echo" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>EchoPlugin</name>
+    <js-module name="EchoPlugin" src="www/EchoPlugin.js">
+        <clobbers target="cordova.plugins.EchoPlugin" />
+    </js-module>
+</plugin>
