@@ -1,0 +1,25 @@
+{
+  "name": "ls",
+  "version": "0.0.1",
+  "description": "A demo echo",
+  "cordova": {
+    "id": "rs-plugin-echo",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackram/cordova-plugins.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "r.stitt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackram/cordova-plugins/issues"
+  },
+  "homepage": "https://github.com/blackram/cordova-plugins#readme"
+}
