@@ -1,4 +1,4 @@
-package rs-plugin-echo;
+package au.com.rs.plugins;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -14,7 +14,7 @@ public class EchoPlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("coolMethod")) {
+        if (action.equals("coolMethod4")) {
             String message = args.getString(0);
             this.coolMethod(message, callbackContext);
             return true;
@@ -24,7 +24,7 @@ public class EchoPlugin extends CordovaPlugin {
 
     private void coolMethod(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
-            callbackContext.success(message);
+            callbackContext.success("ECHO " + message);
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
