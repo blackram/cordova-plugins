@@ -27,5 +27,26 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 
-    original
+    const button = document.createElement('button');
+    button.textContent = 'click me';
+    
+    button.addEventListener('click', () => {
+    
+        try
+        {
+            window.cordova.plugins.EchoPlugin.coolMethod('hi',
+                (result) => {
+                    alert(result);
+                },
+                (err) => {
+                    alert(err);
+                }
+            );
+        }
+        catch (err){
+            alert(err);
+        }
+    });
+    
+    document.querySelector('body').appendChild(button);
 }
