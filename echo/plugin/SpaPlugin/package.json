@@ -1,0 +1,24 @@
+{
+  "name": "spa-plugin",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "rs-plugin-spa",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackram/cordova-plugins.git"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "r.stitt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackram/cordova-plugins/issues"
+  },
+  "homepage": "https://github.com/blackram/cordova-plugins#readme"
+}
