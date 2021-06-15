@@ -46,13 +46,19 @@ public class SpaWebViewClient extends WebViewClient {
    }
 
    private boolean handleUriForOverride(WebView view, final Uri uri) {
+
+        Log.d("*** handle", uri.toString());
+
        final String host = uri.getHost();
        final String scheme = uri.getScheme();
 
        Log.d("*** handle", host);
        Log.d("*** scheme", scheme);
 
-       // would detect host and scheme and bail early if host and scheme are not local web asset
+       if ((scheme.equals("file")) & uri.getPath().startsWith("/android_asset")){ // use url encode for '/android-asset'
+           Log.d("*** local file", host);
+           return false;
+       }
 
        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
        view.getContext().startActivity(intent);
