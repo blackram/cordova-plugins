@@ -21,6 +21,7 @@
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/SpaPlugin.java" target-dir="src/au/com/rs/plugins" />
         <source-file src="src/android/SpaActivity.java" target-dir="src/au/com/rs/plugins" />
+        <source-file src="src/android/SpaWebViewClient.java" target-dir="src/au/com/rs/plugins" />
         <source-file src="src/android/activity_new.xml" target-dir="res/layout"/>
     </platform>
 </plugin>
