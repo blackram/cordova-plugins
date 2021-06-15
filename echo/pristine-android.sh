@@ -9,5 +9,8 @@
  cd ..
  cp index-demo.js host/www/js/index.js
 
+ cd host
  cordova build android
  cordova requirements
+
+ cd ..
