@@ -23,5 +23,7 @@
         <source-file src="src/android/SpaActivity.java" target-dir="src/au/com/rs/plugins" />
         <source-file src="src/android/SpaWebViewClient.java" target-dir="src/au/com/rs/plugins" />
         <source-file src="src/android/activity_new.xml" target-dir="res/layout"/>
+        <asset src="src/assets/o2" target="sites/o2"/>
     </platform>
+    
 </plugin>

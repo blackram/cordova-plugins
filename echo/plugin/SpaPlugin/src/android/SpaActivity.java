@@ -41,7 +41,9 @@ public class SpaActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
 
         webView.setWebViewClient(new SpaWebViewClient());
-        webView.loadUrl("https://www.google.com.au");
+      //  webView.loadUrl("https://www.google.com.au");
+
+        webView.loadUrl("file:///assets/www/sites/o2/index.html");
 
     }
 }

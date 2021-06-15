@@ -52,6 +52,8 @@ public class SpaWebViewClient extends WebViewClient {
        Log.d("*** handle", host);
        Log.d("*** scheme", scheme);
 
+       // would detect host and scheme and bail early if host and scheme are not local web asset
+
        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
        view.getContext().startActivity(intent);
        return true;
