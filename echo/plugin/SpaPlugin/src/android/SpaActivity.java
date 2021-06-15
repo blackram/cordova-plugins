@@ -43,7 +43,7 @@ public class SpaActivity extends Activity {
         webView.setWebViewClient(new SpaWebViewClient());
       //  webView.loadUrl("https://www.google.com.au");
 
-        webView.loadUrl("file:///assets/www/sites/o2/index.html");
+        webView.loadUrl("file:///android_asset/www/sites/o2/index.html");
 
     }
 }
