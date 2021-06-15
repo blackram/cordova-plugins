@@ -3,6 +3,7 @@
  cd host
  cordova platform add android
  cordova plugin add --link ../plugin/EchoPlugin
+ cordova plugin add --link ../plugin/SpaPlugin
  cordova build android
  cordova requirements
  cp www/js/index.js www/js/index.js.bak

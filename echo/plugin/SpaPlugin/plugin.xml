@@ -1,2 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="rs-plugin-spa" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>SpaPlugin</name><js-module name="SpaPlugin" src="www/SpaPlugin.js"><clobbers target="cordova.plugins.SpaPlugin" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="SpaPlugin"><param name="android-package" value="rs-plugin-spa.SpaPlugin" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file><source-file src="src/android/SpaPlugin.java" target-dir="src/rs-plugin-spa/SpaPlugin" /></platform></plugin>
+<plugin id="rs-plugin-spa" version="0.0.1"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SpaPlugin</name>
+    <js-module name="SpaPlugin" src="www/SpaPlugin.js">
+        <clobbers target="cordova.plugins.SpaPlugin" />
+    </js-module>
+    <engines>
+      <engine name="cordova-android" version=">=4.0.0" />
+    </engines>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="SpaPlugin">
+                <param name="android-package" value="au.com.rs.plugins.SpaPlugin" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:label="New Activity" android:name="au.com.rs.plugins.SpaActivity"></activity>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/SpaPlugin.java" target-dir="src/au/com/rs/plugins" />
+        <source-file src="src/android/SpaActivity.java" target-dir="src/au/com/rs/plugins" />
+        <source-file src="src/android/activity_new.xml" target-dir="res/layout"/>
+    </platform>
+</plugin>

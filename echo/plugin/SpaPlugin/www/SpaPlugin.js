@@ -1,5 +1,6 @@
 var exec = require('cordova/exec');
 
-exports.coolMethod = function (arg0, success, error) {
-    exec(success, error, 'SpaPlugin', 'coolMethod', [arg0]);
+/* leave the arg as mahy want to pass info to the plugin */
+exports.launch = function (arg0, success, error) {
+    exec(success, error, 'SpaPlugin', 'launch', [arg0]);
 };
