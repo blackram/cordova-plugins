@@ -5,7 +5,7 @@
   "cordova": {
     "id": "rs-plugin-spa",
     "platforms": [
-      "android"
+      "android", "ios"
     ]
   },
   "repository": {

@@ -11,6 +11,7 @@
 
  cd host
  cordova build android
+ cordova build ios
  cordova requirements
 
  cd ..
