@@ -21,7 +21,7 @@
         NSString *message = [@"ECHO " stringByAppendingString:echo];
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:message];
     } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Arg was null"];
     }
 
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
