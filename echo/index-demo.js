@@ -34,7 +34,7 @@ function onDeviceReady() {
     
         try
         {
-            window.cordova.plugins.SpaPlugin.launch('hi',
+            window.cordova.plugins.EchoPlugin.launch('hi',
                 (result) => {
                     alert(result);
                 },
