@@ -24,7 +24,7 @@
    NSString* echo = [command.arguments objectAtIndex:0];
 
     SpaViewController *newController = [SpaViewController new];
-    newController..modalPresentationStyle = UIModalPresentationFullScreen;        
+    newController.modalPresentationStyle = UIModalPresentationFullScreen;
 
     [self.viewController presentViewController:newController animated:YES completion:nil];
 
