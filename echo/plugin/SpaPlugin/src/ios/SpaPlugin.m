@@ -1,7 +1,7 @@
 /********* SpaPlugin.m Cordova Plugin Implementation *******/
 
 #import <Cordova/CDV.h>
-#import "SpaWebViewController.h"
+#import "SpaViewController.h"
 
 @interface SpaPlugin : CDVPlugin {
   // Member variables go here.
@@ -26,11 +26,17 @@
     NSString* echo = [command.arguments objectAtIndex:0];
 
     
-    SpaWebViewController *newController = [SpaWebViewController new];
+    SpaViewController *newController = [SpaViewController new];
     
+    /* 
+    
+    this piece is where the controller gets presented but is not working 
+
+    may be easier to just set the view directly on the plugin
+
     self.viewController.navigationController?.push(
     [self.viewController addChildViewController: ];
-    
+    */
     if (echo != nil && [echo length] > 0) {
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
     } else {
