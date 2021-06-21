@@ -9,6 +9,7 @@
 
 @interface SpaViewController : UIViewController<WKNavigationDelegate>
 
-
+- (void) setCompletionHandler(completion: SpaViewResultDelegate);
 
 @end
+
