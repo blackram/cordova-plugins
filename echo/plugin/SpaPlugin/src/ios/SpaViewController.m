@@ -6,6 +6,7 @@
 //
 
 #import "SpaViewController.h"
+#import "SpaPlugin.h"
 #import <WebKit/WebKit.h>
 
 @interface SpaViewController ()
@@ -15,9 +16,9 @@
 @implementation SpaViewController
 
 WKWebView *webView2;
-SpaViewResultDelegate completionHandler;
+SpaViewResultDelegate *completionHandler;
 
-- (void)setCompletionHandler(completion: SpaViewResultDelegate){
+- (void)setCompletionHandler(completion: *SpaViewResultDelegate){
     completionHandler = completion;
 }
 

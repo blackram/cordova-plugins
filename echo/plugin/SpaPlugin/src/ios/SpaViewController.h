@@ -6,6 +6,7 @@
 //
 
 #import <WebKit/WebKit.h>
+#import "SpaPlugin.h"
 
 @interface SpaViewController : UIViewController<WKNavigationDelegate>
 

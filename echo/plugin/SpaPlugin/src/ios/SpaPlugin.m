@@ -11,13 +11,18 @@
      NSDictionary* settings = self.commandDelegate.settings;
  }
 
+NSString* _callbackId;
+
+
 - (void)launchMethod:(CDVInvokedUrlCommand*)command
 {
    CDVPluginResult* pluginResult = nil;
    NSString* echo = [command.arguments objectAtIndex:0];
 
+    [self._callback] = command.callbackId;
+    
     SpaViewController *newController = [SpaViewController new];
-    newController.setCompleteCallback(completed);
+    newController.setCompletionHandler(^{[ self (^void)completed];});
   //  newController.modalPresentationStyle = UIModalPresentationFullScreen;
 
     [self.viewController addChildViewController:newController];
@@ -42,7 +47,7 @@
 
 - (void)completed {
   // could accept a dictionary of results and forward as result
-  CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: "controller completed"];
+  CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString: @"controller completed"];
   [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
