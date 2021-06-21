@@ -32,5 +32,7 @@
             </feature>
         </config-file>
         <source-file src="src/ios/SpaPlugin.m" />
+        <source-file src="src/ios/SpaViewController.m"/>
+        <asset src="src/sites" target="sites" />
     </platform>
 </plugin>
