@@ -27,14 +27,34 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
 
-    const button = document.createElement('button');
-    button.textContent = 'click me';
-    
-    button.addEventListener('click', () => {
+    const button1 = document.createElement('button');
+    button1.textContent = 'echo';    
+    button1.addEventListener('click', () => {
     
         try
         {
-            window.cordova.plugins.SpaPlugin.launch('hi',
+            window.cordova.plugins.EchoPlugin.repeat('howdy',
+                (result) => {
+                    alert(result);
+                },
+                (err) => {
+                    alert(err);
+                }
+            );
+        }
+        catch (err){
+            alert(err);
+        }
+    });    
+    document.querySelector('body').appendChild(button1);
+
+    const button2 = document.createElement('button');
+    button2.textContent = 'launch';
+    button2.addEventListener('click', () => {
+
+        try
+        {
+            window.cordova.plugins.SpaPlugin.launch('hullo',
                 (result) => {
                     alert(result);
                 },
@@ -47,6 +67,6 @@ function onDeviceReady() {
             alert(err);
         }
     });
-    
-    document.querySelector('body').appendChild(button);
+    document.querySelector('body').appendChild(button2);
+
 }

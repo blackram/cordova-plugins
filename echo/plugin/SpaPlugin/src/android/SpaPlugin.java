@@ -25,7 +25,7 @@ public class SpaPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         Context context = cordova.getActivity().getApplicationContext();
 
-        if(action.equals("launch")) {
+        if(action.equals("launchMethod")) {
 
             String passedMessage = args.optString(0);
             String message = (passedMessage == null) ? "no message passed" : passedMessage;
